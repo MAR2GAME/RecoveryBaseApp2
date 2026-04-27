@@ -1,0 +1,259 @@
+{
+  "version": "1.0",
+  "last_updated": "2025-11-20T15:14:00Z",
+  "first_trigger_time": 21600,
+  "scene": {
+    "phone_unlock": {
+      "trigger_interval": 960,
+      "enabled": true,
+      "messages": [
+        {
+          "title": "Don't Lose That Moment!",
+          "content": "We found some deleted photos. Tap to restore them instantly.",
+          "route": "/recoverPhotos",
+          "keys": [
+            {
+              "language": "es",
+              "title": "¡No pierdas ese momento!",
+              "content": "Hemos encontrado algunas fotos borradas. Pulsa para restaurarlas al instante."
+            },
+            {
+              "language": "fr",
+              "title": "Ne ratez pas ce moment !",
+              "content": "Nous avons retrouvé des photos supprimées. Appuyez pour les restaurer instantanément."
+            },
+            {
+              "language": "ko",
+              "title": "그 순간을 놓치지 마세요!",
+              "content": "삭제된 사진을 몇 장 찾았습니다. 탭하여 즉시 복원하세요."
+            }
+          ]
+        }
+      ]
+    },
+    "screen_on_5s": {
+      "trigger_interval": 900,
+      "enabled": true,
+      "messages": [
+        {
+          "title": "All Your Files, Restored.",
+          "content": "Everything you recovered is organized and waiting. Tap to explore.",
+          "route": "/recovered",
+          "keys": [
+            {
+              "language": "es",
+              "title": "Todos tus archivos, restaurados.",
+              "content": "Todo lo que has recuperado está organizado y listo para usar. Toca para explorar."
+            },
+            {
+              "language": "fr",
+              "title": "Tous vos fichiers ont été restaurés.",
+              "content": "Tout ce que vous avez récupéré est organisé et vous attend. Appuyez pour explorer."
+            },
+            {
+              "language": "ko",
+              "title": "모든 파일이 복구되었습니다.",
+              "content": "복구하신 모든 자료가 정리되어 있습니다. 탭하여 살펴보세요."
+            }
+          ]
+        }
+      ]
+    },
+    "charging_start": {
+      "trigger_interval": 600,
+      "enabled": true,
+      "messages": [
+        {
+          "title": "Remember What You Saved?",
+          "content": "Revisit those 15 recovered photos and files now. They're all here.",
+          "route": "/recovered",
+          "keys": [
+            {
+              "language": "es",
+              "title": "¿Recuerdas lo que guardaste?",
+              "content": "Revisa ahora esas 15 fotos y archivos recuperados. Están todos aquí."
+            },
+            {
+              "language": "fr",
+              "title": "Vous souvenez-vous de ce que vous avez économisé ?",
+              "content": "Consultez dès maintenant les 15 photos et fichiers récupérés. Ils sont tous ici."
+            },
+            {
+              "language": "ko",
+              "title": "무엇을 저장했는지 기억하시나요?",
+              "content": "복구된 15장의 사진과 파일을 지금 다시 확인해 보세요. 모두 여기에 있습니다."
+            }
+          ]
+        }
+      ]
+    },
+    "charging_end": {
+      "trigger_interval": 600,
+      "enabled": true,
+      "messages": [
+        {
+          "title": "Don't Lose These Memories!",
+          "content": "5 photos are about to be deleted permanently. Recover them now.",
+          "route": "/recoverPhotos",
+          "keys": [
+            {
+              "language": "es",
+              "title": "¡No pierdas estos recuerdos!",
+              "content": "Cinco fotos están a punto de ser eliminadas permanentemente. Recupéralas ahora."
+            },
+            {
+              "language": "fr",
+              "title": "Ne perdez pas ces souvenirs !",
+              "content": "Cinq photos vont être supprimées définitivement. Récupérez-les maintenant."
+            },
+            {
+              "language": "ko",
+              "title": "이 기억을 잃지 마세요!",
+              "content": "사진 5장이 영구적으로 삭제됩니다. 지금 복구하세요."
+            }
+          ]
+        }
+      ]
+    },
+    "app_uninstalled": {
+      "trigger_interval": 600,
+      "enabled": true,
+      "messages": [
+        {
+          "title": "All File Types Recoverable",
+          "content": "From PDFs to spreadsheets, get anything back. Start your recovery now.",
+          "route": "/recoverFiles",
+          "keys": [
+            {
+              "language": "es",
+              "title": "Recuperables todos los tipos de archivos",
+              "content": "Recupera cualquier archivo, desde PDFs hasta hojas de cálculo. Empieza tu recuperación ahora."
+            },
+            {
+              "language": "fr",
+              "title": "Tous les types de fichiers sont récupérables.",
+              "content": "Récupérez tous vos fichiers, des PDF aux tableurs. Commencez votre récupération dès maintenant."
+            },
+            {
+              "language": "ko",
+              "title": "모든 파일 유형 복구 가능",
+              "content": "PDF부터 스프레드시트까지, 무엇이든 되찾으세요. 지금 바로 복구를 시작하세요."
+            }
+          ]
+        }
+      ]
+    },
+    "app_installed": {
+      "trigger_interval": 600,
+      "enabled": true,
+      "messages": [
+        {
+          "title": "Restore Your Highlights",
+          "content": "Get back your best video moments. Fast & easy recovery inside.",
+          "route": "/recoverVideos",
+          "keys": [
+            {
+              "language": "es",
+              "title": "Recupera tus reflejos",
+              "content": "Recupera tus mejores momentos en vídeo. Recuperación rápida y sencilla en nuestro interior."
+            },
+            {
+              "language": "fr",
+              "title": "Restaurez vos mèches",
+              "content": "Récupérez vos meilleurs moments vidéo. Récupération rapide et facile intégrée."
+            },
+            {
+              "language": "ko",
+              "title": "하이라이트 복원",
+              "content": "최고의 영상 순간을 되찾으세요. 빠르고 간편하게 복구하세요."
+            }
+          ]
+        }
+      ]
+    },
+    "delete_photos": {
+      "trigger_interval": 300,
+      "enabled": true,
+      "messages": [
+        {
+          "title": "Oops! Deleted a selfie?",
+          "content": "It happens! We can get it back. Tap here for a quick recovery.",
+          "route": "/recoverPhotos",
+          "keys": [
+            {
+              "language": "es",
+              "title": "¡Ups! ¿Borraste una selfie?",
+              "content": "¡Sucede! Podemos solucionarlo. Pulsa aquí para una recuperación rápida."
+            },
+            {
+              "language": "fr",
+              "title": "Oups ! Vous avez supprimé un selfie ?",
+              "content": "Ça arrive ! On peut le récupérer. Cliquez ici pour une récupération rapide."
+            },
+            {
+              "language": "ko",
+              "title": "앗! 셀카를 삭제하셨나요?",
+              "content": "이런 일이 생길 수도 있어요! 복구해 드리겠습니다. 여기를 탭하면 빠르게 복구할 수 있습니다."
+            }
+          ]
+        }
+      ]
+    },
+    "delete_videos": {
+      "trigger_interval": 300,
+      "enabled": true,
+      "messages": [
+        {
+          "title": "Detected that the video was deleted.",
+          "content": "Tap to see detail.",
+          "route": "/recoverVideos",
+          "keys": [
+            {
+              "language": "es",
+              "title": "Se detectó que el video fue eliminado.",
+              "content": "Toca para ver los detalles."
+            },
+            {
+              "language": "fr",
+              "title": "Détection de la suppression de la vidéo.",
+              "content": "Appuyez pour afficher les détails."
+            },
+            {
+              "language": "ko",
+              "title": "비디오가 삭제된 것을 감지했습니다.",
+              "content": "자세한 내용을 보려면 탭하세요."
+            }
+          ]
+        }
+      ]
+    },
+    "delete_files": {
+      "trigger_interval": 300,
+      "enabled": true,
+      "messages": [
+        {
+          "title": "Was This Deleted by Mistake?",
+          "content": "We found 'Resume.docx'. Tap to preview and restore it instantly.",
+          "route": "/recoverFiles",
+          "keys": [
+            {
+              "language": "es",
+              "title": "¿Se borró por error?",
+              "content": "Hemos encontrado el archivo 'Resume.docx'. Pulsa para obtener una vista previa y restaurarlo al instante."
+            },
+            {
+              "language": "fr",
+              "title": "Ce message a-t-il été supprimé par erreur?",
+              "content": "Nous avons trouvé le fichier «Resume.docx». Appuyez pour l'afficher en aperçu et le restaurer instantanément."
+            },
+            {
+              "language": "ko",
+              "title": "실수로 삭제된 건가요?",
+              "content": "'Resume.docx' 파일을 찾았습니다. 탭하여 미리 보고 즉시 복원하세요."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

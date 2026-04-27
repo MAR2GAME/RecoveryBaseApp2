@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+
+    <application
+        android:name=".MyApp"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:networkSecurityConfig="@xml/config"
+        android:usesCleartextTraffic="true"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/logo_2026"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.PhotoRecovery">
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleTask"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.PhotoRecovery">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="OPEN_MAIN_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!--    TODO: add    -->
+
+<!--        <service-->
+<!--            android:name="com.quickrecover.photonvideotool.notification.CommonService"-->
+<!--            android:enabled="true"-->
+<!--            android:exported="false"-->
+<!--            android:foregroundServiceType="specialUse" >-->
+<!--            &lt;!&ndash; Android 14+ 使用 specialUse 必须添加此属性说明用途 &ndash;&gt;-->
+<!--            <property-->
+<!--                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"-->
+<!--                android:value="To provide reliable file recovery, we utilize a 'specialUse' foreground service for a persistent quick-access notification. Since our recovery utility falls outside standard types like 'mediaPlayback' or 'dataSync,' this classification is necessary to ensure the continuous availability of our core service for the user." />-->
+<!--        </service>-->
+<!--                <action android:name="com.quickrecover.photonvideotool.ACTION_NOTIFICATION_DELETED" />-->
+<!--            </intent-filter>-->
+<!--        </receiver>-->
+<!--        <receiver-->
+<!--            android:name="com.quickrecover.photonvideotool.notification.BootReceiver"-->
+<!--            android:enabled="true"-->
+<!--            android:exported="true">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.BOOT_COMPLETED" />-->
+<!--            </intent-filter>-->
+<!--        </receiver>-->
+
+    </application>
+
+</manifest>

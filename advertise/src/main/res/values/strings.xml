@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">PDFfox</string>
+    <string name="loading_avertisement">Loading advertisement</string>
+    <string name="close">Close</string>
+
+    <string name="recovered">Recovered</string>
+    <string name="other_files">Other Files</string>
+    <string name="photos">Photos</string>
+    <string name="videos">Videos</string>
+
+    <string name="go">Go</string>
+    <string name="check">Check</string>
+
+    <string name="facebook_app_id">1590185508637811</string>
+    <string name="facebook_client_token">6d8edd1c9853e57c091f57e390421ddd</string>
+
+</resources>

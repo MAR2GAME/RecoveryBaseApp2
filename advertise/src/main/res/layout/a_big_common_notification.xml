@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/photos"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+                <ImageView
+        android:src="@drawable/a_notification_photos"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"/>
+
+                <TextView
+                    android:layout_marginTop="6dp"
+                    android:text="@string/photos"
+                    android:textSize="13sp"
+                    android:textColor="@color/notification_text_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/videos"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+                <ImageView
+        android:src="@drawable/a_notification_videos"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"/>
+
+                <TextView
+                    android:layout_marginTop="6dp"
+                    android:text="@string/videos"
+                    android:textSize="13sp"
+                    android:textColor="@color/notification_text_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/files"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+                <ImageView
+        android:src="@drawable/a_notification_files"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"/>
+
+                <TextView
+                    android:layout_marginTop="6dp"
+                    android:text="@string/other_files"
+                    android:textSize="13sp"
+                    android:textColor="@color/notification_text_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/recovered"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+                <ImageView
+        android:src="@drawable/a_notification_recovered"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"/>
+
+                <TextView
+                    android:layout_marginTop="6dp"
+                    android:text="@string/recovered"
+                    android:textSize="13sp"
+                    android:textColor="@color/notification_text_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+</LinearLayout>
