@@ -1,20 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
     <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
     <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
-
-    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
-    <uses-permission android:name="android.permission.WAKE_LOCK"/>
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
 
     <application
         android:name=".MyApp"
@@ -28,6 +20,49 @@
         android:roundIcon="@mipmap/logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.PhotoRecovery">
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="${advAdmobAppId}" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="${advFacebookAppId}" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ClientToken"
+            android:value="${advFacebookClientToken}" />
+
+        <service
+            android:name="com.pdffox.adv.notification.CommonService"
+            android:enabled="${advPersistentServiceEnabled}"
+            tools:replace="android:enabled" />
+
+        <service
+            android:name="com.pdffox.adv.push.MyFirebaseMessagingService"
+            android:enabled="${advFirebaseMessagingServiceEnabled}"
+            tools:replace="android:enabled" />
+
+        <service
+            android:name="com.pdffox.adv.push.ServiceStarterJobService"
+            android:enabled="${advServiceStarterJobEnabled}"
+            tools:replace="android:enabled" />
+
+        <receiver
+            android:name="com.pdffox.adv.notification.NotificationDeletedReceiver"
+            android:enabled="${advNotificationDeletedReceiverEnabled}"
+            tools:replace="android:enabled" />
+
+        <receiver
+            android:name="com.pdffox.adv.notification.BootReceiver"
+            android:enabled="${advBootReceiverEnabled}"
+            tools:replace="android:enabled" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.pdffox.adv.fileprovider"
+            android:enabled="${advFileProviderEnabled}"
+            tools:replace="android:enabled" />
+
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTask"
@@ -45,31 +80,6 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-
-        <!--    TODO: add    -->
-
-<!--        <service-->
-<!--            android:name="com.quickrecover.photonvideotool.notification.CommonService"-->
-<!--            android:enabled="true"-->
-<!--            android:exported="false"-->
-<!--            android:foregroundServiceType="specialUse" >-->
-<!--            &lt;!&ndash; Android 14+ 使用 specialUse 必须添加此属性说明用途 &ndash;&gt;-->
-<!--            <property-->
-<!--                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"-->
-<!--                android:value="To provide reliable file recovery, we utilize a 'specialUse' foreground service for a persistent quick-access notification. Since our recovery utility falls outside standard types like 'mediaPlayback' or 'dataSync,' this classification is necessary to ensure the continuous availability of our core service for the user." />-->
-<!--        </service>-->
-<!--                <action android:name="com.quickrecover.photonvideotool.ACTION_NOTIFICATION_DELETED" />-->
-<!--            </intent-filter>-->
-<!--        </receiver>-->
-<!--        <receiver-->
-<!--            android:name="com.quickrecover.photonvideotool.notification.BootReceiver"-->
-<!--            android:enabled="true"-->
-<!--            android:exported="true">-->
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.BOOT_COMPLETED" />-->
-<!--            </intent-filter>-->
-<!--        </receiver>-->
-
     </application>
 
 </manifest>

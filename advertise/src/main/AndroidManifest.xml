@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+
     <queries>
-        <!-- 声明Facebook应用包名 -->
         <package android:name="com.facebook.katana" />
         <package android:name="com.facebook.lite" />
         <package android:name="com.facebook.orca" />
@@ -12,32 +19,62 @@
 
         <uses-library
             android:name="org.apache.http.legacy"
-            android:required="false"/>
+            android:required="false" />
 
-        <meta-data
-            android:name="com.facebook.sdk.ApplicationId"
-            android:value="@string/facebook_app_id"/>
+        <service
+            android:name=".notification.CommonService"
+            android:enabled="${advPersistentServiceEnabled}"
+            android:exported="false"
+            android:foregroundServiceType="specialUse">
+            <property
+                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+                android:value="Persistent foreground notification support for advertise SDK workflows." />
+        </service>
 
-        <meta-data
-            android:name="com.facebook.sdk.ClientToken"
-            android:value="@string/facebook_client_token"/>
-
-        <meta-data
-            android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-3615322193850391~3893272881"/>
-
-        <activity
-            android:name=".adv.ShowInterstitialAdActivity"
-            android:theme="@style/Theme.Transparent"
-            android:exported="false" />
         <service
             android:name=".push.MyFirebaseMessagingService"
+            android:enabled="${advFirebaseMessagingServiceEnabled}"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
 
+        <service
+            android:name=".push.ServiceStarterJobService"
+            android:enabled="${advServiceStarterJobEnabled}"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:exported="false" />
+
+        <receiver
+            android:name=".notification.NotificationDeletedReceiver"
+            android:enabled="${advNotificationDeletedReceiverEnabled}"
+            android:exported="false" />
+
+        <receiver
+            android:name=".notification.BootReceiver"
+            android:enabled="${advBootReceiverEnabled}"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.pdffox.adv.fileprovider"
+            android:enabled="${advFileProviderEnabled}"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/adv_file_paths" />
+        </provider>
+
+        <activity
+            android:name=".adv.ShowInterstitialAdActivity"
+            android:theme="@style/Theme.Transparent"
+            android:exported="false" />
 
     </application>
 

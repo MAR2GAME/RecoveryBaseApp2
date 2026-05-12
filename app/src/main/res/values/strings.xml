@@ -107,4 +107,8 @@
 
     <string name="recover">Recover</string>
     <string name="check_all_your_recovered_data">Check all your recovered data</string>
+
+    <string name="attribution">Ad</string>
+    <string name="confirm_your_selected_language">Confirm your selected language?</string>
+    <string name="confirm">Confirm</string>
 </resources>

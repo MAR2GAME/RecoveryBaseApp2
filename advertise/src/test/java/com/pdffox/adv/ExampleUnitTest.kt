@@ -1,4 +1,4 @@
-package com.pdffox.adv.use
+package com.pdffox.adv
 
 import org.junit.Assert
 import org.junit.Test

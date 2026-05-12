@@ -20,15 +20,15 @@
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
 
--keep class com.quickrecover.photonvideotool.core.bean.CapacityBean {
+-keep class com.datatool.photorecovery.core.bean.CapacityBean {
     *;
 }
 
--keep class com.quickrecover.photonvideotool.core.bean.FileData {
+-keep class com.datatool.photorecovery.core.bean.FileData {
     *;
 }
 
--keep class com.quickrecover.photonvideotool.core.bean.FoldBean {
+-keep class com.datatool.photorecovery.core.bean.FoldBean {
     *;
 }
 
@@ -95,20 +95,19 @@
 -keepclassmembers class kotlin.Metadata { *; }
 -keepattributes *Annotation*
 
-# TODO: add
-#-keep class com.quickrecover.photonvideotool.notification.PushConfig { *; }
-#-keep class com.quickrecover.photonvideotool.notification.Scene { *; }
-#-keep class com.quickrecover.photonvideotool.notification.AppInstalled { *; }
-#-keep class com.quickrecover.photonvideotool.notification.AppUninstalled { *; }
-#-keep class com.quickrecover.photonvideotool.notification.ChargingEnd { *; }
-#-keep class com.quickrecover.photonvideotool.notification.ChargingStart { *; }
-#-keep class com.quickrecover.photonvideotool.notification.PhoneUnlock { *; }
-#-keep class com.quickrecover.photonvideotool.notification.ScreenOn5s { *; }
-#-keep class com.quickrecover.photonvideotool.notification.DeletePhotos { *; }
-#-keep class com.quickrecover.photonvideotool.notification.DeleteVideos { *; }
-#-keep class com.quickrecover.photonvideotool.notification.DeleteFiles { *; }
-#-keep class com.quickrecover.photonvideotool.notification.Message { *; }
-#-keep class com.quickrecover.photonvideotool.notification.Key { *; }
-#-keep class com.quickrecover.photonvideotool.notification.CommonService {
-#    *;
-#}
+-keep class com.datatool.photorecovery.notification.PushConfig { *; }
+-keep class com.datatool.photorecovery.notification.Scene { *; }
+-keep class com.datatool.photorecovery.notification.AppInstalled { *; }
+-keep class com.datatool.photorecovery.notification.AppUninstalled { *; }
+-keep class com.datatool.photorecovery.notification.ChargingEnd { *; }
+-keep class com.datatool.photorecovery.notification.ChargingStart { *; }
+-keep class com.datatool.photorecovery.notification.PhoneUnlock { *; }
+-keep class com.datatool.photorecovery.notification.ScreenOn5s { *; }
+-keep class com.datatool.photorecovery.notification.DeletePhotos { *; }
+-keep class com.datatool.photorecovery.notification.DeleteVideos { *; }
+-keep class com.datatool.photorecovery.notification.DeleteFiles { *; }
+-keep class com.datatool.photorecovery.notification.Message { *; }
+-keep class com.datatool.photorecovery.notification.Key { *; }
+-keep class com.datatool.photorecovery.notification.CommonService {
+    *;
+}

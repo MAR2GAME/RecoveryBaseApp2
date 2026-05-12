@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "685212907167",
+    "project_id": "photo-recovery-8137d",
+    "storage_bucket": "photo-recovery-8137d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:685212907167:android:f9833ff0f20e876073d4aa",
+        "android_client_info": {
+          "package_name": "com.datatool.photorecovery"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCOmB7sSiaObWKl4WTKIG3NegF8r1mvD8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

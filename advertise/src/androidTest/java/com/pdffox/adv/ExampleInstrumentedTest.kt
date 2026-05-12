@@ -1,4 +1,4 @@
-package com.pdffox.adv.use
+package com.pdffox.adv
 
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
